@@ -1,0 +1,19 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Vehicle Predictor</title>
+  </head>
+  <body>
+    <h1>Vehicle Prediction</h1>
+    <form method="post">
+      <label for="datetime">Enter Date and Time (YYYY-MM-DD HH:MM:SS):</label>
+      <input type="text" id="datetime" name="datetime" required />
+      <button type="submit">Predict</button>
+    </form>
+    {% if prediction is not none %}
+    <h2>Predicted Vehicles: {{ prediction }}</h2>
+    {% endif %}
+  </body>
+</html>
